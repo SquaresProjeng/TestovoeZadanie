@@ -6,23 +6,26 @@ public class Character_Anim_Control : MonoBehaviour
 
     public void Change_Animation(int animstate)
     {
-        switch (animstate)
+        if (animator != null)
         {
-            case 0:
-                animator.Play("Idle");
-                break;
-            case 1:
-                animator.Play("Walk");
-                break;
-            case 2:
-                animator.Play("Dead");
-                break;
-            case 3:
-                animator.Play("Punch_Atack");
-                break;
-            case 4:
-                animator.Play("Gun_Attack");
-                break;
+            switch (animstate)
+            {
+                case 0:
+                    animator.Play("Idle");
+                    break;
+                case 1:
+                    animator.Play("Walk");
+                    break;
+                case 2:
+                    animator.Play("Dead");
+                    break;
+                case 3:
+                    animator.Play("Punch_Atack");
+                    break;
+                case 4:
+                    animator.Play("Gun_Attack");
+                    break;
+            }
         }
     }
 

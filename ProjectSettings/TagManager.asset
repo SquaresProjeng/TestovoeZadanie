@@ -10,6 +10,7 @@ TagManager:
   - player_head
   - game_over_text
   - item
+  - game_manager
   layers:
   - Default
   - TransparentFX

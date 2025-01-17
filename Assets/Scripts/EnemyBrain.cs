@@ -9,6 +9,8 @@ public class EnemyBrain : MonoBehaviour
     [SerializeField] private HPBarPlayer HealthBar;
     [SerializeField] private Enemy_Anim_Control anim_comtroller;
     [SerializeField] private GameObject _bonusPrefab;
+    [SerializeField] private G_Manager _g_M;
+
     [SerializeField] public bool _withPlayer = false;
 
     private Rigidbody2D rb;
@@ -24,6 +26,7 @@ public class EnemyBrain : MonoBehaviour
     {
         Instantiate(_bonusPrefab, transform.position, Quaternion.identity);
         PlCon.kiledEnemie += 1;
+        _g_M.Save_Game();
         Destroy(gameObject);
     }
     public void Set_Damage(float Dm)
@@ -55,6 +58,8 @@ public class EnemyBrain : MonoBehaviour
         HealthBar.Change_Max_Health(estats.Health);
         P = GameObject.FindGameObjectWithTag("Player");
         PlCon = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Control>();
+        anim_comtroller = gameObject.GetComponentInChildren<Enemy_Anim_Control>();
+        _g_M = GameObject.FindGameObjectWithTag("game_manager").GetComponent< G_Manager>();
     }
 
     void Update()

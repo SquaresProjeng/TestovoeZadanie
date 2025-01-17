@@ -85,6 +85,7 @@ public class Player_Control : MonoBehaviour
         _pstats = GetComponent<CharProperty>();
         inventory = GetComponent<Inventory>();
         _healthBar.Change_Max_Health(_pstats.Health);
+        _animController = gameObject.GetComponentInChildren<Character_Anim_Control>();
         _g_o_text.SetActive(false);
         kiledEnemie = _saver.shouldBeKiled;
         Player_Idle();

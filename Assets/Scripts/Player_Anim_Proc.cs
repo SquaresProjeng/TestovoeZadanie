@@ -15,7 +15,7 @@ public class Player_Anim_Proc : MonoBehaviour
         GameObject nearestEnemy = Enem.FindClosestEnemy();
         if (nearestEnemy != null)
         {
-            if (Pl.GetComponent<CharProperty>().GunId>0 & inv.CheckId(3) & Enem.LastDist< 4 )
+            if (Pl.GetComponent<CharProperty>().GunId>0 & inv.CheckId(3) & Enem.LastDist < 4 )
             {
                 nearestEnemy.GetComponent<EnemyBrain>().Set_Damage(pstats.Damage);
             } else if (Enem.LastDist < 0.5) nearestEnemy.GetComponent<EnemyBrain>().Set_Damage(10);

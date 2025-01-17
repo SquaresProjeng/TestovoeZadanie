@@ -344,7 +344,7 @@ GameObject:
   - component: {fileID: 8097418712383632006}
   - component: {fileID: 8097418712383632005}
   m_Layer: 0
-  m_Name: Main_Zombie
+  m_Name: Main_Zombie_old
   m_TagString: Enemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
